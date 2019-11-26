@@ -20,7 +20,7 @@
   <div class="jumbotron">
     <h1 class="text-center">
       <strong>
-        <i class="fa fa-newspaper-o"></i> New York Times Search</strong>
+        <i class="fa fa-newspaper-o"></i> NYT Search</strong>
     </h1>
   </div>
 
@@ -50,11 +50,9 @@
               </div>
               <div class="form-group">
                 <label for="start-year">Start Year (Optional):</label>
-                <input type="text" class="form-control" id="start-year">
-              </div>
-              <div class="form-group">
+                <input type="date" id="start-year" name="trip-start" value="2020-11-26" min="2000-01-01" max="2020-11-26">
                 <label for="end-year">End Year (Optional):</label>
-                <input type="text" class="form-control" id="end-year">
+                <input type="date" id="end-year" name="trip-start" value="2020-11-26" min="2000-01-01" max="2020-11-26">
               </div>
               <button type="submit" class="btn btn-default" id="run-search">
                 <i class="fa fa-search"></i> Search</button>
