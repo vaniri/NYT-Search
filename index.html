@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NYT Search</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1 class="text-center">
+      <strong>
+        <i class="fa fa-newspaper-o"></i> New York Times Search</strong>
+    </h1>
+  </div>
+
+  <!-- Main Search container-->
+  <div class="main-container">
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <div class="card">
+          <div class="card-header">
+            <strong>
+              <i class="fa fa-list-alt"></i> Search Parameters</strong>
+          </div>
+          <div class="card-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="search-term">Search Term:</label>
+                <input type="text" class="form-control" id="search-term">
+              </div>
+              <div class="form-group">
+                <label for="article-count">Number of Records to Retrieve:</label>
+                <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                  <option selected value="1">1</option>
+                  <option value="5" selected>5</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="start-year">Start Year (Optional):</label>
+                <input type="text" class="form-control" id="start-year">
+              </div>
+              <div class="form-group">
+                <label for="end-year">End Year (Optional):</label>
+                <input type="text" class="form-control" id="end-year">
+              </div>
+              <button type="submit" class="btn btn-default" id="run-search">
+                <i class="fa fa-search"></i> Search</button>
+              <button class="btn btn-default" id="clear-all">
+                <i class="fa fa-trash"></i> Clear Results</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card  -->
+    <div class="card">
+      <div class="card-header"> <i class="fa fa-calendar" style="font-size:18px"></i> Top Articles</div>
+      <div class="card-body"></div>
+    </div>
+
+    <!-- Footer  -->
+    <footer class="footer font-small blue">
+      <div class="footer text-center py-3"></div>
+      <div></div>
+
+      <div>
+        <h6 class="text-center"> Good news every day! <i class="fa fa-newspaper-o" style="font-size:18px"></i></h6>
+      </div>
+
+      <!-- Output data -->
+      <div id="Output">
+        <h3>Articles found:</h3>
+      </div>
+
+      <script src="search.js"></script>
+</body>
+
+</html>

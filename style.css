@@ -1,0 +1,36 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.jumbotron {
+  background-color: #20315a;
+  color: white;
+  margin: 0 2vw;
+}
+
+.main-container {
+  margin: 0 2vw;
+}
+
+.footer {
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+h6 {
+  text-align: center;
+  border-top: solid 0.05em lightgray;
+  padding-top: 1em;
+}
+
+.topArticle {
+  display: inline;
+}
+
+#Output {
+  padding: 1em;
+  border: solid 0.05em lightgray;
+  margin-top: 2em;
+
+}
