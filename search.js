@@ -1,10 +1,11 @@
 $("#run-search").click(() => {
     event.preventDefault();
-    let userInput = $('#search-term').val();
-    let startYear = $('#start-year').val();
-    let endYear = $('#end-year').val();
+    searchTerms = new Object ();
+    searchTerms.q = $('#search-term').val();
+    if ($('#begin-date').val()){ searchTerms["begin-date"] = $('#begin-date').val(); }
+    if ($('#end-date').val()){ searchTerms["end-date"] = $('#end-date').val(); }
 
-    let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${userInput}&begin-date=${startYear}&end-date=${endYear}&api-key=kdjdawKhMdyUhJm90JcVk30M0ryADXkg`;
+    let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?${$.param(searchTerms)}&api-key=kdjdawKhMdyUhJm90JcVk30M0ryADXkg`;
     console.log(queryURL);
     $.ajax({
         url: queryURL,
@@ -17,7 +18,6 @@ $("#run-search").click(() => {
         }
     });
 })
-
 
 $("#clear-all").on("click", () => {
     $("#Output").html("");
